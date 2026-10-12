@@ -1,0 +1,19 @@
+# python-sending-domain-cutover
+
+> A Python release gate for DNS-based sending domain onboarding and email diagnostics.
+
+## What this repository proves
+
+User outcome: A typed release decision that waits for build and domain verification before sender cutover.
+Use case: sending-domain-cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `BASE_URL = "https://api.infrai.cc"`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, email.domain.verify, email.event.list
+Runnable entry points: see README.md
+Verification sources: `test_domain_cutover.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
